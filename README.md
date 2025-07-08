@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# SwiftAssignment Dashboard App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a responsive front-end dashboard built using React and Tailwind CSS. It features a user profile screen and a comments dashboard, consuming data from public APIs. It demonstrates routing, pagination, sorting, search, and global state management using React Context.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Profile Screen**  
+  - Fetches and displays the first user from the API  
+  - Displays ID, name, email, address, and phone  
+  - Profile data is stored in a global context  
 
-### `npm start`
+- **Comments Dashboard**  
+  - Fetches 500 comments from the API  
+  - Custom pagination with options for 10 / 50 / 100 per page  
+  - Partial search on name and email fields  
+  - Clean, tabular layout using Tailwind CSS  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Global Header**  
+  - Application name on the left  
+  - User's initials and name on the right, from global context  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Routing**  
+  - `/` - Comments Dashboard  
+  - `/profile` - User Profile Screen  
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React (with Hooks)
+- Tailwind CSS
+- React Router DOM
+- React Context API
+- JSONPlaceholder API (for dummy data)
 
-### `npm run build`
+## Folder Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+src/
+├── App.js
+├── DashboardContext.js
+├── components/
+│ ├── Header/
+│ │ └── index.js
+│ ├── ProfileScreen/
+│ │ └── index.js
+│ └── CommentsDashboard/
+│ └── index.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup Instructions
 
-### `npm run eject`
+1. Clone the repository  
+   `git clone https://github.com/your-username/swift-dashboard.git`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install dependencies  
+   `npm install`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Start development server  
+   `npm start`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. View in browser  
+   Open [http://localhost:3000](http://localhost:3000)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## API References
 
-## Learn More
+- **Users**: https://jsonplaceholder.typicode.com/users  
+- **Comments**: https://jsonplaceholder.typicode.com/comments
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Notes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- All styles are handled using Tailwind CSS utility classes.
+- State persistence is handled using React hooks; localStorage can be added for refresh-proof filters.
